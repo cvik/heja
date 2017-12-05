@@ -1,0 +1,16 @@
+{application, heja,
+ [{description, ""},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel,
+                  stdlib,
+                  elli,
+                  lejson
+                 ]},
+  {maintainers, [""]},
+  {licenses, ["Apache"]},
+  {links, [{"Github", "https://github.com/cvik/heja"}]},
+  {modules, []},
+  {mod, {'heja_app', no_arg}},
+  {env, []}
+ ]}.

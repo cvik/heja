@@ -1,0 +1,10 @@
+.eunit
+deps
+ebin
+_build
+*.o
+*.beam
+*.plt
+erl_crash.dump
+TEST-*
+rebar3.crashdump
