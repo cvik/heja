@@ -1,5 +1,5 @@
 {application, heja,
- [{description, ""},
+ [{description, "HTTP Erlang JSON APIs - library for easy API management"},
   {vsn, "0.1.1"},
   {registered, []},
   {applications, [kernel,
@@ -7,7 +7,7 @@
                   elli,
                   lejson
                  ]},
-  {maintainers, [""]},
+  {maintainers, ["Christoffer Vikstrom"]},
   {licenses, ["Apache"]},
   {links, [{"Github", "https://github.com/cvik/heja"}]},
   {modules, []},
