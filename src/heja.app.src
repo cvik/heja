@@ -1,6 +1,6 @@
 {application, heja,
  [{description, "HTTP Erlang JSON APIs - library for easy API management"},
-  {vsn, "0.1.3"},
+  {vsn, "0.1.4"},
   {registered, []},
   {applications, [kernel,
                   stdlib,
