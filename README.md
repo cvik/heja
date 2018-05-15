@@ -52,7 +52,7 @@ requests. It will always be the empty map for `GET` and `DELETE` requests.
 3> heja:get(Ref, "/api/v1/users/:id", fun(_Body, #{id:=Id}) -> {ok, #{user=>#{id=>Id}}} end).
 ok
 
-4> heja:serve(8080).
+4> heja:serve(Ref, 8080).
 ok
 ```
 
