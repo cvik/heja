@@ -12,6 +12,7 @@
 -type method() :: atom().
 -type handler() :: function().
 -type dispatch_list() :: [{path(), method(), handler()}].
+-type router_error() :: no_handler_found | method_not_supported.
 
 %% API ------------------------------------------------------------------------
 
@@ -32,7 +33,7 @@ add(Path, Method, Fun, Tree) ->
     end.
 
 -spec get(path(), method(), router()) ->
-    {ok, Handler::function(), Bindings::map()} | {error, no_handler_found}.
+    {ok, Handler::function(), Bindings::map()} | {error, Error::router_error()}.
 get(Path, Method, Tree) when is_binary(Path) ->
     Parts = binary:split(Path, <<$/>>, [global, trim_all]),
     get_handler(Parts, Method, Tree, #{});
