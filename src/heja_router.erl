@@ -65,6 +65,8 @@ add_handler([Part|Path], Method, Fun, Tree) ->
         error ->
             Tree#{Part=>add_handler(Path, Method, Fun, #{})}
     end;
+add_handler([], Method, Fun, #{handler:=Existing} = Tree) ->
+    Tree#{handler=>maps:merge(Existing, #{Method=>Fun})};
 add_handler([], Method, Fun, Tree) ->
     Tree#{handler=>#{Method=>Fun}}.
 
