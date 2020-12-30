@@ -119,8 +119,7 @@ teardown_api(Ref) ->
     ok = heja:del_handler(Ref, delete, "/api/v1/users/:id").
 
 id() ->
-    %% need to use an atom as a start because of heja internals
-    'c08ba9b6-4cb3-4750-a141-64f5d81b904c'.
+    <<"c08ba9b6-4cb3-4750-a141-64f5d81b904c">>.
 
 %% Internal -------------------------------------------------------------------
 
