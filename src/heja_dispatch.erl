@@ -89,8 +89,10 @@ is_json_type(_) -> false.
 
 atomize_keys(Map) when is_map(Map) ->
     maps:fold(fun(K, V, M) ->M#{to_atom(K)=>atomize_keys(V)} end, #{}, Map);
+atomize_keys(Values) when is_list(Values) ->
+    [atomize_keys(V) ||  V <- Values];
 atomize_keys(Value) ->
-    to_atom(Value).
+    Value.
 
 to_atom(T) when is_binary(T) -> binary_to_atom(T, utf8);
 to_atom(T) when is_list(T) -> list_to_atom(T);
